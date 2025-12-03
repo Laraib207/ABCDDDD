@@ -462,19 +462,19 @@ export default function WhyUsMinimal() {
       number: "01",
       title: "Quality",
       desc: "Premium brown mustard seeds processed with traditional cold-press methods for rich flavour and unmatched quality.",
-      image: "/images/quality.jpg",
+      image: "/images/p01.png", // Mustard oil label [generated_image:41]
     },
     {
       number: "02",
-      title: "Purity",
-      desc: "Double filtration process ensures pure, additive-free oil that preserves essential nutrients and authentic taste.",
-      image: "/images/purity.jpg",
+      title: "Purity", 
+      desc: "Double filtration process ensures pure, additive-free soybean oil that preserves essential nutrients and authentic taste.",
+      image: "/images/p02.png", // Soybean oil label [generated_image:44]
     },
     {
       number: "03",
       title: "Authenticity",
-      desc: "Cold-pressed tradition with modern quality checks delivers the pungency and aroma Indian kitchens trust.",
-      image: "/images/authenticity.jpg",
+      desc: "Cold-pressed palm oil tradition with modern quality checks delivers the stability and aroma Indian kitchens trust.",
+      image: "/images/p03.png", // Palm oil label [generated_image:45]
     },
   ];
 
@@ -482,7 +482,7 @@ export default function WhyUsMinimal() {
     <section className="relative py-20 md:py-32 bg-gradient-to-br from-[#DFC6F6] via-[#fef9c3] to-[#DFC6F6]">
       <div className="container mx-auto max-w-5xl px-6 md:px-8">
         {/* Header */}
-        <div className="mb-16">
+        <div className="mb-16 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -490,13 +490,13 @@ export default function WhyUsMinimal() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-sm font-medium text-amber-600 tracking-wider uppercase mb-3">
-              Subheading
+              Veer Bharat Promise
             </p>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Why Choose Us?
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 ${playfair.className}">
+              Authenticity, Purity & Quality
             </h2>
-            <p className="text-gray-600 max-w-2xl leading-relaxed">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
+              Experience the Veer Bharat difference - where traditional cold-pressed methods meet modern quality standards for pure, authentic cooking oils.
             </p>
           </motion.div>
         </div>
@@ -510,39 +510,41 @@ export default function WhyUsMinimal() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
-              className="group"
+              className="group bg-white/70 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white/50"
             >
               {/* Image */}
-              <div className="relative w-full h-48 rounded-2xl overflow-hidden mb-6 shadow-lg">
+              <div className="relative w-full h-56 md:h-64 rounded-2xl overflow-hidden mb-6 shadow-2xl">
                 <Image 
                   src={reason.image} 
-                  alt={reason.title}
+                  alt={`${reason.title} - Veer Bharat ${reason.title.toLowerCase()} oil`}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="object-contain sm:object-cover group-hover:scale-105 transition-transform duration-700"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
 
               {/* Number */}
-              <div className="text-sm font-medium text-gray-400 mb-2">
+              <div className="text-sm font-bold text-amber-600 mb-4 tracking-wider">
                 {reason.number}
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
                 {reason.title}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-600 leading-relaxed mb-6">
+              <p className="text-gray-700 leading-relaxed mb-8 text-lg">
                 {reason.desc}
               </p>
 
-              {/* Arrow Link */}
-              <button className="inline-flex items-center justify-center w-10 h-10 rounded-full border-2 border-gray-300 text-gray-600 group-hover:border-amber-600 group-hover:text-amber-600 transition-all duration-300">
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              {/* Veer Bharat Badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-full text-sm shadow-lg">
+                <span>Veer Bharat</span>
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
-              </button>
+              </div>
             </motion.div>
           ))}
         </div>

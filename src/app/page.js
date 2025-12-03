@@ -1207,6 +1207,8 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import HealthBenefits from "../components/HealthBenefits";
+import WhoWeAreSection from "@/app/sections/WhoWeAreSection";
+
 
 /* ---------- Fonts ---------- */
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "600", "800"] });
@@ -1389,7 +1391,8 @@ export default function Home() {
       <VideoShowcase />
 
       {/* ====== FEATURED IMAGE (REPLACES PREVIOUS BRANCHES) ====== */}
-      <FeaturedImageSection />
+      <WhoWeAreSection />
+
       {/* <VeerBharatHero /> */}
 
       <HealthBenefits />
@@ -1452,7 +1455,7 @@ function CategoriesGrid() {
     {
       id: "cat-1",
       name: "Mustard Oil",
-      image: "/images/MMustard-blog.jpg",
+      image: "/images/mustard-5l-jar.jpg",
       description:
         "Mustard oil with strong aroma & flavor. Perfect for traditional cooking and pickling. High smoke point, rich in omega-3 fatty acids, ideal for frying and sautéing.",
     },
@@ -1561,20 +1564,20 @@ function CategoriesGrid() {
                   href="/products"
                   className="group/button inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-amber-400 to-orange-500 px-8 py-4 text-sm font-bold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-amber-500/25"
                 >
-                  Exploree Category
-                  <svg
+                  {/* Exploree Category */}
+                  {/* <svg
                     className="ml-3 h-4 w-4 transition-transform duration-300 group-hover/button:translate-x-1"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
-                  >
-                    <path
+                  > */}
+                    {/* <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={3}
                       d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
+                    /> */}
+                  {/* </svg> */}
                 </a>
               </div>
 
